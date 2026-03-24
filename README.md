@@ -1,525 +1,267 @@
-# Reserva IoT — API Backend
+# 🧪 Reserva IoT — Backend com Testes
 
-API REST para monitoramento de reservas florestais com sensores IoT. Construída com **Node.js + TypeScript**, **Express 5**, **TypeORM** e **PostgreSQL**.
+API REST para monitoramento de reservas florestais com sensores IoT.
+
+Este projeto tem foco em:
+
+* ✅ Testes unitários
+* ✅ Testes de integração
+* ✅ Cobertura de código (coverage)
 
 ---
 
-## Início Rápido — Criar usuário no Postman
+## 🚀 Tecnologias
 
-> Faça isso antes de qualquer outra coisa. Sem um usuário cadastrado não é possível fazer login.
+* Node.js + TypeScript
+* Express
+* TypeORM
+* PostgreSQL
+* Jest + Supertest
+* Zod
 
-### Passo 1 — Suba a API
+---
+
+## 📦 Instalação
 
 ```bash
-# Sobe só o banco em Docker, depois roda a API local:
-docker compose up postgres -d
+git clone https://github.com/AndresonGlin/testes-api-reservaIot.git
+cd projeto-typescript-aula
 npm install
-npm run dev
 ```
-
-Aguarde aparecer no terminal:
-```
-Conectou com o banco!
-Server is running in port: 6060
-```
-
-### Passo 2 — Crie o usuário no Postman
-
-Abra o Postman e configure a requisição:
-
-| Campo | Valor |
-|-------|-------|
-| Método | `POST` |
-| URL | `http://localhost:6060/api/register` |
-| Body | `raw` → `JSON` |
-
-Cole o JSON abaixo no body:
-
-```json
-{
-  "nome": "admin",
-  "email": "admin@email.com",
-  "senha": "minimo8chars",
-  "matricula": "MAT001",
-  "especialidade": "Biologia",
-  "titulacao": "Mestrado",
-  "dataNascimento": "1995-05-20"
-}
-```
-
-**Regras importantes:**
-- `senha` — mínimo **8 caracteres**
-- `titulacao` — deve ser exatamente uma das opções: `Graduação` | `Especialização` | `Mestrado` | `Doutorado`
-- `dataNascimento` — formato `YYYY-MM-DD`
-- `email` e `matricula` são únicos (não pode repetir)
-- `linhaPesquisa` é opcional
-
-Clique em **Send**. Resposta esperada `201 Created`:
-
-```json
-{
-  "id": "uuid...",
-  "nome": "João Silva",
-  "email": "joao@email.com",
-  "matricula": "MAT001"
-}
-```
-
-### Passo 3 — Faça login para obter o token
-
-```
-POST http://localhost:6060/api/login
-```
-```json
-{
-  "email": "joao@email.com",
-  "senha": "minimo8chars"
-}
-```
-
-Resposta:
-```json
-{
-  "tokens": {
-    "tokenAccess": "eyJ...",
-    "tokenRefresh": "eyJ..."
-  }
-}
-```
-
-### Passo 4 — Use o token nas rotas protegidas
-
-No Postman: aba **Authorization** → tipo **Bearer Token** → cole o `tokenAccess`.
-
-O token expira em **15 minutos**. Quando isso acontecer, use o endpoint `/api/refresh` (veja seção abaixo).
 
 ---
 
-## Tecnologias
-
-- Node.js 20 + TypeScript
-- Express 5
-- TypeORM + PostgreSQL 16
-- JWT (access token 15min + refresh token 7d)
-- Bcryptjs — hash de senhas
-- Zod — validação de entrada
-- Docker + Docker Compose
-
----
-
-## Pré-requisitos
-
-- [Node.js 20+](https://nodejs.org/)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado e **rodando**
-
----
-
-## Variáveis de Ambiente
-
-O arquivo `.env` já vem configurado para desenvolvimento local:
-
-```env
-JWT_ACCESS_SECRET="CHAVE SECRETA ACCESS"
-JWT_ACCESS_EXPIRATION="15m"
-JWT_REFRESH_SECRET="CHAVE SECRETA REFRESH"
-JWT_REFRESH_EXPIRATION="7d"
-PORT=6060
-NODE_ENV="development"
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASS=123
-DB_NAME=reservaIot2
-```
-
-> Em produção, troque os segredos JWT por valores fortes.
-
----
-
-## Como rodar — Desenvolvimento Local
-
-### Passo 1 — Subir o banco de dados com Docker
+## 🐘 Subindo o banco de dados
 
 ```bash
 docker compose up postgres -d
 ```
 
-Aguarde o container ficar saudável. Verifique com:
+Verifique se está rodando:
 
 ```bash
 docker ps
 ```
 
-O container `postgres-db` deve aparecer com status `healthy`.
+---
 
-### Passo 2 — Instalar dependências
-
-```bash
-npm install
-```
-
-### Passo 3 — Iniciar a API
+## ▶️ Rodando a aplicação
 
 ```bash
 npm run dev
 ```
 
 Saída esperada:
+
 ```
 Conectou com o banco!
 Server is running in port: 6060
 ```
 
-A API estará em: **`http://localhost:6060`**
-
-> O TypeORM com `synchronize: true` cria as tabelas automaticamente na primeira execução.
-
 ---
 
-## Como rodar — Tudo no Docker (API + Banco)
+## 🧪 Executando os testes
+
+### Rodar todos os testes
 
 ```bash
-docker compose up --build -d
+npm test
 ```
 
-Parar tudo:
+---
+
+### Rodar testes com cobertura
+
 ```bash
-docker compose down
+npm run test:cov
 ```
 
-Parar e apagar dados do banco:
+ou
+
 ```bash
-docker compose down -v
+npm test -- --coverage
 ```
 
 ---
 
-## Testando com Postman
+### Rodar um teste específico (RECOMENDADO)
 
-### Health Check
-```
-GET http://localhost:6060/health
-```
-Resposta: `{ "status": "ok" }`
+Para evitar conflitos entre testes (principalmente por causa de **foreign keys**), rode individualmente:
 
----
-
-### 1. Criar usuário (Register)
-
-```
-POST http://localhost:6060/api/register
-Content-Type: application/json
-```
-
-```json
-{
-  "nome": "João Silva",
-  "email": "joao@email.com",
-  "senha": "minimo8chars",
-  "matricula": "MAT001",
-  "especialidade": "Biologia",
-  "titulacao": "Mestrado",
-  "dataNascimento": "1995-05-20"
-}
-```
-
-> **Titulações válidas:** `Graduação` | `Especialização` | `Mestrado` | `Doutorado`
-> `linhaPesquisa` é opcional.
-
-Resposta `201 Created`:
-```json
-{
-  "id": "uuid...",
-  "nome": "João Silva",
-  "email": "joao@email.com",
-  "matricula": "MAT001",
-  ...
-}
+```bash
+npm test area.test.ts
+npm test sensor.test.ts
+npm test leitura.test.ts
+npm test pesquisador.test.ts
 ```
 
 ---
 
-### 2. Login
+## ⚠️ Importante — Isolamento dos testes
 
-```
-POST http://localhost:6060/api/login
-Content-Type: application/json
-```
+Os testes de integração usam o **mesmo banco**, então:
 
-```json
-{
-  "email": "joao@email.com",
-  "senha": "minimo8chars"
-}
-```
-
-Resposta `200 OK`:
-```json
-{
-  "tokens": {
-    "tokenAccess": "eyJ...",
-    "tokenRefresh": "eyJ..."
-  }
-}
-```
-
-> Guarde o `tokenAccess` para usar nas demais rotas.
+* Existe dependência entre entidades (Area → Sensor → Leitura)
+* Pode ocorrer erro de foreign key
+* Pode ocorrer falso positivo/negativo ao rodar tudo junto
 
 ---
 
-### 3. Rotas autenticadas
+## ✔️ Boas práticas adotadas
 
-No Postman: aba **Authorization** → tipo **Bearer Token** → cole o `tokenAccess`.
+Limpeza do banco antes de cada teste:
+
+```ts
+await appDataSource.query("DELETE FROM leitura");
+await appDataSource.query("DELETE FROM sensor");
+await appDataSource.query("DELETE FROM area");
+```
+
+Outras práticas:
+
+* Criar dados dentro do próprio teste
+* Usar valores únicos (`Date.now()`)
+* Garantir independência entre testes
 
 ---
 
-### 4. Refresh Token
+## 🧪 Tipos de testes
 
-Quando o `tokenAccess` expirar (15min):
+### 🔹 Testes Unitários
+
+Local:
 
 ```
-POST http://localhost:6060/api/refresh
-Content-Type: application/json
+src/__tests__/unit
 ```
 
-```json
-{
-  "refreshToken": "eyJ..."
-}
-```
+Testam:
 
-Resposta:
-```json
-{
-  "tokens": {
-    "tokenAccess": "eyJ...",
-    "tokenRefresh": "eyJ..."
-  }
-}
+* Services
+* Validações (Zod)
+
+Exemplo:
+
+```ts
+createPesquisadorSchema.parse(data)
 ```
 
 ---
 
-### 5. Logout
+### 🔹 Testes de Integração
+
+Local:
 
 ```
-POST http://localhost:6060/api/logout
-Content-Type: application/json
+src/__tests__/integration
 ```
 
-```json
-{
-  "refreshToken": "eyJ..."
-}
+Testam:
+
+* Fluxo completo (request → controller → service → banco)
+
+Exemplo:
+
+```ts
+request(app).post("/api/area")
 ```
 
 ---
 
-## Endpoints completos
+## 🎯 O que está sendo testado
 
-Base URL: `http://localhost:6060/api`
+### Área
 
-### Pesquisadores
+* Criar
+* Listar
+* Buscar por ID
+* Atualizar
+* Deletar
+* Erros (400 / 404)
 
-| Método | Rota | Auth | Descrição |
-|--------|------|------|-----------|
-| POST | `/register` | Não | Cadastrar pesquisador |
-| GET | `/pesquisador` | Não | Listar todos |
-| GET | `/pesquisador/:id` | Não | Buscar por ID |
-| PUT | `/pesquisador/:id` | Não | Atualizar |
-| DELETE | `/pesquisador/:id` | Não | Remover |
+### Sensor
 
-### Autenticação
+* Criar
+* Listar
+* Atualizar
+* Deletar
+* Validação de área
+* Serial duplicado
 
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | `/login` | Login |
-| POST | `/refresh` | Renovar access token |
-| POST | `/logout` | Encerrar sessão |
+### Leitura
 
-### Áreas
+* Criar
+* Listar
+* Buscar por ID
+* Relacionamento com sensor/área
+* Validação de dados
 
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | `/area` | Criar área |
-| GET | `/area` | Listar |
-| GET | `/area/:id` | Buscar por ID |
-| PUT | `/area/:id` | Atualizar |
-| DELETE | `/area/:id` | Remover |
-| GET | `/area/sensor/:id` | Sensores ativos da área |
+### Pesquisador
 
-### Sensores
-
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | `/sensors` | Criar sensor |
-| GET | `/sensors` | Listar |
-| PUT | `/sensors/:id` | Atualizar |
-| DELETE | `/sensors/:id` | Remover |
-
-### Leituras
-
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | `/leitura` | Registrar leitura |
-| GET | `/leitura` | Listar |
-| GET | `/leitura/:id` | Buscar por ID |
-| PUT | `/leitura/:id` | Atualizar |
-| DELETE | `/leitura/:id` | Remover |
-| GET | `/leitura/area/:areaId` | Leituras de uma área |
+* Criar
+* Listar
+* Buscar por ID
+* Atualizar
+* Deletar
+* Validação de duplicidade
 
 ---
 
-## Estrutura do Projeto
+## 🧠 Observações importantes
+
+* IDs inválidos (não UUID) podem gerar erro 500 se não tratados
+* Validações feitas com Zod
+* Services usam AppError
+* Controllers retornam status HTTP corretamente
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```
 src/
-├── config/         # JWT config
-├── controllers/    # Handlers HTTP
-├── database/       # Conexão TypeORM (appDataSource)
-├── entities/       # Entidades do banco (Pesquisador, Sensor, Area, Leitura, RefreshToken)
-├── errors/         # AppError
-├── middleware/      # validarBody, errorHandler, authMiddleware
-├── routes/         # Rotas da API
-├── services/       # Lógica de negócio
-├── utils/          # asyncHandler
-├── validats/       # Schemas Zod
-└── server.ts       # Entry point
+├── __tests__/
+│   ├── integration/
+│   └── unit/
+├── controllers/
+├── services/
+├── entities/
+├── routes/
+├── middleware/
+├── validats/
+└── database/
 ```
 
 ---
 
-## Frontend (Angular)
+## 💡 Observação
 
-O frontend está em `../Reserva-IoT/`. Para rodar:
+Este projeto utiliza banco real nos testes de integração.
 
-```bash
-cd ../Reserva-IoT
-npm install
-npm start
-```
+Por isso, em alguns cenários é recomendado rodar testes isoladamente para evitar:
 
-Acesse **`http://localhost:4200`**.
-A API precisa estar rodando em `http://localhost:6060`.
+* Conflitos de chave estrangeira
+* Interferência entre testes
+* Resultados inconsistentes
 
----
+Em um cenário ideal, seria utilizado:
 
-## Como funciona a parte IoT — Wokwi alimentando o Dashboard
-
-O dashboard do frontend exibe leituras em tempo real de sensores. Esses dados chegam via **simulação IoT com o Wokwi**.
-
-### Visão geral do fluxo
-
-```
-Wokwi (simulador IoT)
-        │
-        │  HTTP POST /api/leitura
-        ▼
-  API Backend (Node.js)
-        │
-        │  salva no banco
-        ▼
-  PostgreSQL
-        │
-        │  GET /api/leitura/area/:id
-        ▼
-  Frontend Angular (Dashboard)
-```
-
-### Como configurar no Wokwi
-
-1. **Acesse** [wokwi.com](https://wokwi.com) e crie um projeto com ESP32 (ou Arduino com WiFi).
-
-2. **No código do firmware**, configure a URL da API:
-   ```cpp
-   const char* serverUrl = "http://SEU_IP_LOCAL:6060/api/leitura";
-   ```
-   > Use o IP da sua máquina na rede local (ex: `192.168.0.10`), não `localhost`.
-
-3. **O Wokwi envia um POST** para `/api/leitura` com o payload:
-   ```json
-   {
-     "valorLeitura": 25.4,
-     "sensorId": "uuid-do-sensor",
-     "areaId": "uuid-da-area"
-   }
-   ```
-
-4. **Pré-requisito**: a Área e o Sensor precisam já estar cadastrados na API (use o frontend ou Postman para criar antes de ligar o Wokwi).
-
-### Fluxo completo para a aula
-
-1. Sobe a API e o banco (`docker compose up postgres -d` + `npm run dev`)
-2. Abre o frontend (`npm start` em `../Reserva-IoT`)
-3. Cria um pesquisador (via Postman ou frontend)
-4. Faz login no frontend
-5. Cria uma **Área** e um **Sensor** no CRUD do dashboard
-6. Abre o projeto Wokwi com o código apontando para a API
-7. Inicia a simulação no Wokwi — ele começa a enviar leituras
-8. O dashboard Angular atualiza automaticamente exibindo as leituras por área
-
-### Endpoints IoT relevantes
-
-| Rota | Método | Descrição |
-|------|--------|-----------|
-| `POST /api/leitura` | Wokwi envia dados | Registrar leitura |
-| `GET /api/leitura/area/:areaId` | Frontend consulta | Leituras de uma área |
-| `GET /api/sensors` | Frontend lista | Sensores cadastrados |
-
-> O `sensor_id` usado pelo Wokwi deve ser o mesmo UUID gerado pela API ao cadastrar o sensor.
+* Banco exclusivo para testes
+* Ou mocks/stubs
 
 ---
 
-## Simulando envio de dados IoT pelo Postman (sem hardware)
+## ✅ Conclusão
 
-> **Não precisa de autenticação.** O endpoint `/api/leitura` é público — qualquer dispositivo ou ferramenta pode enviar dados.
+Este projeto demonstra:
 
-Use isso para testar o dashboard sem precisar do Wokwi ou de um ESP32 físico.
+* Boas práticas de testes em API REST
+* Separação entre testes unitários e integração
+* Uso de banco real para validação completa
+* Controle de erros e validações
 
-### Passo 1 — Obtenha o ID do sensor
+---
 
-Primeiro busque os sensores cadastrados:
+## 👨‍💻 Autor
 
-```
-GET http://localhost:6060/api/sensors
-```
-
-Copie o `id` do sensor que deseja usar.
-
-### Passo 2 — Envie uma leitura
-
-```
-POST http://localhost:6060/api/leitura
-Content-Type: application/json
-```
-
-```json
-{
-  "umidade": 65.5,
-  "temperatura": 28.3,
-  "sensor_id": "cole-aqui-o-uuid-do-sensor",
-  "dataHora": "2024-01-01T10:00:00.000Z"
-}
-```
-
-**Campos:**
-- `umidade` — número entre `0` e `100` (percentual)
-- `temperatura` — número entre `-50` e `100` (graus Celsius)
-- `sensor_id` — UUID do sensor cadastrado (obrigatório)
-- `dataHora` — qualquer data ISO válida (o sistema substitui pela hora atual automaticamente)
-
-Resposta `201 Created`:
-```json
-{
-  "id": "uuid...",
-  "umidade": 65.5,
-  "temperatura": 28.3,
-  "dataHora": "2024-03-11T14:30:00.000Z"
-}
-```
-
-### Passo 3 — Veja no dashboard
-
-Abra o frontend em `http://localhost:4200`, faça login, e acesse o dashboard. Os dados aparecerão nos gráficos da área à qual o sensor pertence.
-
-> Repita o POST várias vezes com valores diferentes para ver a evolução no gráfico.
+Andreson Glin

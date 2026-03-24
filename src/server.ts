@@ -67,3 +67,6 @@ appDataSource.initialize()
         console.log(error)
     })
 
+
+//usado para teste de integracao
+export default app; 

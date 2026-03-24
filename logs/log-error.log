@@ -892,3 +892,195 @@
 {"level":"error","message":"jwt must be provided - /api/refresh - ::1 "}
 {"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/register - ::1 "}
 {"level":"error","message":"Credências Inválidas - /api/login - ::1 "}
+{"level":"error","message":"No metadata for \"Pesquisador\" was found. - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"No metadata for \"Pesquisador\" was found. - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"No metadata for \"Pesquisador\" was found. - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"No metadata for \"Sensor\" was found. - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"No metadata for \"Sensor\" was found. - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"No metadata for \"Sensor\" was found. - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"No metadata for \"Sensor\" was found. - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/22950620-a9e1-4d8e-9dd7-ad7532eeec0f - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"id-invalido\" - /api/area/id-invalido - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"id-invalido\" - /api/area/id-invalido - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"id-invalido\" - /api/area/id-invalido - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"id-invalido\" - /api/area/id-invalido - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"id-invalido\" - /api/area/id-invalido - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"leitura\" violates foreign key constraint \"FK_c894adf077c9a7075e4ff1066f9\" - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/leitura/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor com este Serial Number já cadastrado! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/de9e668d-12a9-4aa0-91d9-693a2693b2d0 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/leitura/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/f5b6a745-091c-4737-a6e2-36970a79c61a - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/85c2fd81-c837-415f-8f8a-2c4605893b9b - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/leitura/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/f7129ee0-4f3e-47df-9055-50fa6a4c262d - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/42c9f87c-a86f-4a2e-9a3e-b7d95c67178d - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/3148bb3c-985e-4efd-b777-3a5ee47c0305 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/leitura/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/sensors/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/leitura/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"insert or update on table \"sensor\" violates foreign key constraint \"FK_4f7f853812b6ea99c2493d6908e\" - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/6a27837d-b0ac-4da1-8bd8-7bed402fdb71 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/e1038cbf-fc27-4793-9355-53a03aca9b3e - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/sensors/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/leitura/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"E-mail ou Matrícula já cadastrados - /api/pesquisador - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado! - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Área não encontrada - /api/area/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não foi encontrado! - /api/leitura - ::ffff:127.0.0.1 "}
+{"level":"error","message":"invalid input syntax for type uuid: \"undefined\" - /api/leitura/undefined - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Area não foi encontrada! - /api/sensors - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Sensor não encontrado - /api/sensors/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Leitura não encontrada - /api/leitura/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
+{"level":"error","message":"Pesquisador não encontrado - /api/pesquisador/550e8400-e29b-41d4-a716-446655440000 - ::ffff:127.0.0.1 "}
